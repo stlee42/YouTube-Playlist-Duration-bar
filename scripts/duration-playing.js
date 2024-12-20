@@ -2,7 +2,6 @@ let theme;
 
 let divDurationBlock;
 let divDurationProgress;
-let divTotalBlock;
 let durationTotal;
 let divCurrentBlock;
 let durationWatched;
@@ -10,7 +9,6 @@ let durationPercent;
 let durationRemaining;
 
 export const updateDurationPlaying = () => {
-
     if (theme === undefined)
         theme = checkTheme();
 
@@ -37,12 +35,6 @@ const createUiELement = () => {
     divDurationProgress.setAttribute(theme, "");
     divDurationProgress.id = "progress-bar-playing";
     divDurationProgress.className = "progress-bar";
-
-    // <div> Inner total block
-    divTotalBlock = document.createElement("div");
-    divTotalBlock.id = "total-block";
-    divTotalBlock.style.display = "flex";
-    // divTotalBlock.className = "current-block";
 
     // <Span> Total: 
     durationTotal = document.createElement('span');
@@ -84,9 +76,8 @@ const appendUiElement = () => {
     headerContents.appendChild(divDurationBlock);
 
     divDurationBlock.appendChild(divDurationProgress);
-    divDurationBlock.appendChild(divTotalBlock);
+    divDurationBlock.appendChild(durationTotal);
     divDurationBlock.appendChild(divCurrentBlock);
-
     divCurrentBlock.appendChild(durationWatched);
     divCurrentBlock.appendChild(durationPercent);
     divCurrentBlock.appendChild(durationRemaining);
@@ -94,14 +85,6 @@ const appendUiElement = () => {
 
 const checkTheme = () => {
     return (document.querySelector("[dark]")) ? ("dark") : ("light");
-}
-
-const getNumberOfVideo = () => {
-    let current = document.querySelector("#page-manager #playlist #header-contents #publisher-container > div > yt-formatted-string > span:nth-child(1)").innerHTML
-    let total = document.querySelector("#page-manager #playlist #header-contents #publisher-container > div > yt-formatted-string > span:nth-child(3)").innerHTML
-    console.log(current)
-    console.log(total)
-    return [current, total]
 }
 
 const getVideoTimeList = () => {
