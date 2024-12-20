@@ -1,6 +1,6 @@
 {
     "name": "YouTube Playlist Length & Progress Bar",
-    "version": "0.6.6",
+    "version": "0.6.7",
     "description": "A progress bar to show playlist progress and duration",
     "manifest_version": 3,
     "host_permissions": [
@@ -43,7 +43,7 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "id": "UUIDv4-fd275221-4bad-4558-bf14-79afb62e7008"
+            "id": "{fd275221-4bad-4558-bf14-79afb62e7008}"
         }
     }
 }
