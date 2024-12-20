@@ -2,12 +2,10 @@ COMMON="css/common.css css/duration-playing.css css/duration-playlist.css css/po
 CHROME="scripts/background.js"
 FIREFOX=""
 
-VERSION=0.6.6
-
 mv manifest-chrome.json manifest.json
-zip $VERSION-chrome.zip $CHROME $COMMON manifest.json
+zip release-chrome.zip $CHROME $COMMON manifest.json
 mv manifest.json manifest-chrome.json
 
 mv manifest-firefox.json manifest.json
-zip $VERSION-firefox.zip $FIREFOX $COMMON manifest.json
+zip release-firefox.zip $FIREFOX $COMMON manifest.json
 mv manifest.json manifest-firefox.json
