@@ -60,7 +60,6 @@ const checkTheme = () => {
     }
     return ("light");
 }
-}
 
 const getVideoTimeList = () => {
     let videos_list = document.querySelector('#page-manager [page-subtype="playlist"] #contents #contents #contents');

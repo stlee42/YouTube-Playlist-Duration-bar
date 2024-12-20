@@ -84,7 +84,12 @@ const appendUiElement = () => {
 }
 
 const checkTheme = () => {
-    return (document.querySelector("[dark]")) ? ("dark") : ("light");
+    if ( window &&
+         window.matchMedia &&
+         window.matchMedia('(prefers-color-scheme: dark)').matches ) {
+        return ("dark");
+    }
+    return ("light");
 }
 
 const getVideoTimeList = () => {
