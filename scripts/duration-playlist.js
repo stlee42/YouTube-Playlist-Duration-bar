@@ -45,8 +45,22 @@ const createUiELement = () => {
 }
 
 const appendUiElement = () => {
-    const headerContents = document.querySelector('#page-manager [page-subtype="playlist"] > ytd-playlist-header-renderer > div > div.immersive-header-content.style-scope.ytd-playlist-header-renderer > div.thumbnail-and-metadata-wrapper.style-scope.ytd-playlist-header-renderer > div > div.metadata-action-bar.style-scope.ytd-playlist-header-renderer')
-    headerContents.insertAdjacentElement('afterend', divDurationBlock);
+    // from https://github.com/nrednav/youtube-playlist-duration-calculator/blob/dc8661d6e01e9c6db199c250ead59839d3d0e0c6/src/main.js#L433
+    let playlistMetadataElement = null;
+    if (!playlistMetadataElement) { // youtube premium
+        playlistMetadataElement = document.querySelector('.yt-flexible-actions-view-model-wiz__action-row');
+    }
+    if (!playlistMetadataElement) { // new style
+        playlistMetadataElement = document.querySelector('.immersive-header-content .metadata-action-bar');
+    }
+    if (!playlistMetadataElement) { // old style
+        playlistMetadataElement = document.querySelector('ytd-playlist-sidebar-renderer #items');
+    }
+
+    playlistMetadataElement.parentElement.insertBefore(
+      divDurationBlock,
+      playlistMetadataElement.nextElementSibling
+    );
 
     divDurationBlock.appendChild(durationTotal);
     divDurationBlock.appendChild(videoCounted);
@@ -73,17 +87,13 @@ const getVideoTimeList = () => {
     let fullList = [];
     
     for (const video of videos) {
-        let ts = "";
         let videoTimeElement = video.querySelector("#text");
 
-        if (videoTimeElement == null || videoTimeElement.innerText == '') {
-            ts = "00:00";
+        if (videoTimeElement && videoTimeElement.innerText != '') {
+            let ts = videoTimeElement.innerText.trim();
+	    fullList.push(ts);
+	    count++;
         }
-        else {
-            ts = videoTimeElement.innerText.trim();
-        }
-        fullList.push(ts);
-        count++;
     }
     return { count, fullList };
 }
