@@ -181,9 +181,9 @@ const updateUI = (watchedTs, remainingTs, totalTs, watchedPercent) => {
     divDurationProgress = document.getElementById("progress-bar-playing");
     
 
-    durationTotal.innerHTML = "Total: " + totalTs;
-    durationWatched.innerHTML = watchedTs;
-    durationRemaining.innerHTML = "- " + remainingTs;
-    durationPercent.innerHTML = watchedPercent + "%";
+    durationTotal.innerText = "Total: " + totalTs;
+    durationWatched.innerText = watchedTs;
+    durationRemaining.innerText = "- " + remainingTs;
+    durationPercent.innerText = watchedPercent + "%";
     divDurationProgress.style.width = watchedPercent + "%";
 }
