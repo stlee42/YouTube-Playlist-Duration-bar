@@ -1,5 +1,7 @@
-# YouTube Playlist Duration bar
+# YouTube Playlist Length & Progress Bar
 This is a Chrome/Firefox extension to display a progress bar showing playlist progress and duration.
+
+### Bug that made the extension inoperable in light mode has been fixed
 
 # Description
 This extension calculate and display the progress and duration of YouTube playlist when watching video in playlist or viewing playlist. 
@@ -20,9 +22,9 @@ Works on any type of playlist including public or private playlist, Watch later,
 > Only count video in the playlist panel, if the number of videos counted not matching the actual number of videos in the playlist, scroll down to load more videos, or some videos are hidden by YouTube UI.
 
 # Installation
-Chrome Web Store: [YouTube Playlist Duration bar](https://chrome.google.com/webstore/detail/youtube-playlist-duration/klbacnllhiilbiiedcbgfafmnedldgeg?hl=en-GB&authuser=0)
+Chrome Web Store: YouTube Playlist Length & Progress Bar
 
-Firefox add-ons: [YouTube Playlist Duration bar](https://addons.mozilla.org/en-US/firefox/addon/youtube-playlist-duration-bar/)
+Firefox add-ons: YouTube Playlist Length & Progress Bar
 
 # Screenshots
 ![](screenshot/playing-both.png)
