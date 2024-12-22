@@ -22,9 +22,9 @@ Works on any type of playlist including public or private playlist, Watch later,
 > Only count video in the playlist panel, if the number of videos counted not matching the actual number of videos in the playlist, scroll down to load more videos, or some videos are hidden by YouTube UI.
 
 # Installation
-Chrome Web Store: YouTube Playlist Length & Progress Bar
+Chrome Web Store: [YouTube Playlist Length & Progress Bar](https://chromewebstore.google.com/detail/mbfcijodhoihbhmdkadddacklngighgn)
 
-Firefox add-ons: YouTube Playlist Length & Progress Bar
+Firefox add-ons: [YouTube Playlist Length & Progress Bar](https://addons.mozilla.org/firefox/addon/youtube-playlist-length/)
 
 # Screenshots
 ![](screenshot/playing-both.png)
