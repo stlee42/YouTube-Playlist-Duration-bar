@@ -1,5 +1,6 @@
 {
     "name": "YouTube Playlist Length & Progress Bar",
+    "homepage_url": "https://github.com/stlee42/YouTube-Playlist-Duration-bar/",
     "version": "0.6.7",
     "description": "A progress bar to show playlist progress and duration",
     "manifest_version": 3,
